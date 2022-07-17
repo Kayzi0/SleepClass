@@ -26,7 +26,7 @@ class ConvNet (nn.Module):
         self.pool = nn.AdaptiveAvgPool1d(output_size=1)
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(in_features=128, out_features=55)
+            nn.Linear(in_features=128, out_features=5)
         )
 
     def forward(self, x):
@@ -38,4 +38,4 @@ class ConvNet (nn.Module):
 
 
 if __name__ == '__main__':
-    summary(ConvNet(), (11, 300))
+    summary(ConvNet(), (5, 300))

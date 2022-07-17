@@ -3,7 +3,7 @@ import numpy as np
 from torch.utils.data import Dataset, DataLoader
 
 #Basic dataset implementation; included label count for testing purposes
-class MyDataset(Dataset):
+class SleepDataset(Dataset):
     def __init__(self, data, labels, train=False):
         self.data = torch.from_numpy(data)
         self.labels = torch.from_numpy(labels)
